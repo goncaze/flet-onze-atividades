@@ -6,7 +6,9 @@ class TabuadaView(ft.View):
     def __init__(self, page: ft.Page):
         super().__init__()
         self.route = "/tabuada"
-        self.appbar = ft.AppBar(title=ft.Text("Tabuada"), bgcolor="green")
+        self.appbar = ft.AppBar(
+            title=ft.Text(value="Tabuada", color="white"), bgcolor="green"
+        )
         self.page = page
         self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
