@@ -43,24 +43,10 @@ class MaiorMenorMedia(ft.View):
 
         media = (numero_1 + numero_2 + numero_3) / 3
 
-        if numero_1 < numero_2 < numero_3:
-            maior = numero_3
-            menor = numero_1
-        elif numero_1 < numero_3 < numero_2:
-            maior = numero_2
-            menor = numero_1
-        elif numero_1 > numero_2 > numero_3:
-            maior = numero_1
-            menor = numero_3
-        elif numero_1 > numero_3 > numero_2:
-            maior = numero_1
-            menor = numero_2
-        elif numero_3 > numero_1 > numero_2:
-            maior = numero_3
-            menor = numero_2
-        elif numero_3 < numero_1 < numero_2:
-            maior = numero_2
-            menor = numero_3
+        lista = [numero_1, numero_2, numero_3]
+        lista.sort()
+        maior = lista[-1]
+        menor = lista[0]
 
         self.txt_resultado.value = f"Maior: {maior} \nMenor: {menor} \nMédia: { media }"
         self.txt_resultado.update()
