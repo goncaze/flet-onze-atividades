@@ -3,13 +3,13 @@ import flet as ft
 
 class TabuadaView(ft.View):
 
-    def __init__(self, page: ft.Page):
+    def __init__(self):
         super().__init__()
         self.route = "/tabuada"
         self.appbar = ft.AppBar(
             title=ft.Text(value="Tabuada", color="white"), bgcolor="green"
         )
-        self.page = page
+
         self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
         self.ttf_numero = ft.TextField(

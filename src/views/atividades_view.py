@@ -21,6 +21,14 @@ class AtividadesView(ft.View):
                         text="Maior, menor e média",
                         on_click=lambda _: self.page.go("/mmm"),
                     ),
+                    ft.ElevatedButton(
+                        text="Jogo da adivinhação",
+                        on_click=lambda _: self.page.go("/jogo_adivinhacao"),
+                    ),
+                    ft.ElevatedButton(
+                        text="Jogo da Forca",
+                        on_click=lambda _: self.page.go("/jogo_forca"),
+                    ),
                 ],
             )
         ]
